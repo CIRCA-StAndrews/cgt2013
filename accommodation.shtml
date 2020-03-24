@@ -1,0 +1,34 @@
+<html><head><title>Accommodation</title></head>
+
+<!--#include FILE="header.inc" -->
+
+<center><h2>Accommodation and Food</h2></center>
+
+<!--#include FILE="sidebar.inc" -->
+
+
+<h3>Accommodation Information</h3>
+
+<p align=justify>
+Accommodation will be in
+<a href="http://www.st-andrews.ac.uk/accommodation/arrivals/mcintosh/">McIntosh Hall</a>.
+</p>
+
+<h3>Food</h3>
+<p>Breakfast and dinner will be served in McIntosh Hall. Breakfast will
+be served to participants on each morning from Monday to
+Friday. Dinner will be served on Sunday, Monday, Wednesday and
+Thursday evenings. The conference dinner will be on Tuesday.</p>
+
+<p>Lunches will be provided at the Mathematical Institute, as will
+morning and afternoon tea/coffee with biscuits.</p>
+
+<p>See the <a href="./registration.shtml">Registration and Payments section</a>.
+</p>
+
+<p align=justify>
+</p>
+
+</table>
+
+</body></html>

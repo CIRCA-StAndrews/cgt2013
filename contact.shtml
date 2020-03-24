@@ -1,0 +1,40 @@
+<html><head><title>Contact</title></head>
+
+<!--#include FILE="header.inc" -->
+
+<center><h2>Contact us</h2></center>
+
+<!--#include FILE="sidebar.inc" -->
+
+<h3>Contact Information</h3>
+
+<h4>Email</h4>
+
+<p align=justify>
+The conference e-mail address is: 
+cgt2013<img src=./at.gif>mcs.st-andrews.ac.uk<br>
+</p>
+
+<h4>Post</h4>
+
+<p align=left>
+The postal address for conference matters
+</p>
+
+<p align=justify>
+Computational Group Theory St Andrews 2013<br>
+CIRCA<br>
+School of Mathematics<br>
+North Haugh<br>
+St Andrews<br>
+KY16 9ST<br>
+UNITED KINGDOM</i>
+</p>
+
+<h4>Emergency contact numbers</h4>
+Will follow.
+
+
+</table>
+
+</body></html>

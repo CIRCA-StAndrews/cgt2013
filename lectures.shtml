@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>The Lectures</title>
+</head>
+
+<!--#include FILE="./header.inc" -->
+<center><h2>The Lecture courses</h2></center>
+<!--#include FILE="./sidebar.inc" -->
+
+<p>
+On this page we provide links to the notes and handouts for the courses and special lectures. Not all are yet available -
+we will continue to add them as we get them.
+</p>
+
+<h3>The courses</h3>
+
+<h4>Hulpke</h4>
+<ul>
+<li><a href="Talks/hulpke_all.pdf">All four lectures in one file</a>
+</ul>
+
+<h4>Eick</h4>
+<p>
+<ul>
+<li><a href="Talks/eick1.pdf">Lecture 1 slides</a>
+<li><a href="Talks/eick2.pdf">Lecture 2 slides</a>
+<li><a href="Talks/eick3.pdf">Lecture 3 slides</a>
+<li><a href="Talks/eick4.pdf">Lecture 3 slides</a>
+</ul>
+Much of Prof. Eick's course was delivered on the whiteboard. Additional to the slides, (participant) Felix Rehren has kindly
+made available <a href="Talks/eick_notes.html">the course notes</a> he made during these lectures.
+</p>
+
+<h4>Holt</h4>
+<a href="http://homepages.warwick.ac.uk/~mareg/CGT13.pdf">Complete lecture slides (via Derek Holt's Warwick webpage)</a>
+
+<h4>Neunhöffer</h4>
+<ul>
+<li><a href="Talks/neunhoffer1.pdf">Lecture 1</a>
+<li><a href="Talks/neunhoffer2.pdf">Lecture 2</a>
+<li><a href="Talks/neunhoffer3.pdf">Lecture 3</a>
+<li><a href="Talks/neunhoffer4.pdf">Lecture 4</a>
+</ul>
+
+<h3>Special lectures and extra sessions</h3>
+
+<ul>
+<li><a href="Talks/konovalov_slides.pdf">Konovalov Special Lecture</a>
+<li><a href="Talks/neunhoffer_gapobj.pdf">Neunhoeffer Extra Session: "Objects, Types and Method Selection in GAP"</a>
+</ul>
+
+
+
+<h3>Lab worksheets</h3>
+
+<ul>
+<li><a href="http://www-groups.mcs.st-and.ac.uk/~neunhoef/Teaching/lmscompgrptheory.html">The course worksheets collected on
+Max Neunhöffer's website</a>. Those
+sheets contain links to <a href="http://www-circa.mcs.st-and.ac.uk/~neunhoef/Publications/GAPsess/">some GAP sessions</a>
+<li><a href="Talks/konovalov_handouts.pdf">SCSCP worksheet for Konovalov special lecture</a>
+</ul>
+
+</body>
+</html>

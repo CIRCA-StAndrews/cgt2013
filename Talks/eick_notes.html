@@ -1,0 +1,446 @@
+<h1>Eick: Soluble Groups, $p$-Groups</h1>
+
+<h2 count="1">1. Polycyclic Presentations</h2>
+
+<p>$G$ is <em>polycyclic</em> means that $G$ has a normal series
+	$$ G = G_1 \unrhd G_2 \unrhd \dotsm \unrhd G_n \unrhd G_{n+1} = 1 $$
+such that $G_i/G_{i+1}$ is cyclic.</p>
+
+<p>All $p$-groups are polycyclic.
+Polycyclic implies soluble and finitely generated.</p>
+
+<h3>Polycylic sequences</h3>
+
+<p>For $g_i$ chosen such that $\langle g_iG_{i+1}\rangle = G_i/G_{i+1}$,
+the tuple $(g_1,\dotsc,g_n)$ is a <em>polycyclic (generating) sequence</em> for $G$,
+<strong>pcgs</strong> in short.
+Furthermore, set $r_i = [G_i:G_{i+1}]$,
+so that $r_i\in\NN\cup\{\infty\}$.
+Then $(r_1,\dotsc,r_n)$ is the <em>sequence of relative orders</em>.</p>
+
+<p><a id="lem-uniqexp">1</a>) Lemma.
+Fix a pcgs for $G$.
+Every $g\in G$ can be written as a word $g = g_1^{e_1}\dotsm g_i^{e_i}$
+relative to the pcgs,
+with $e_i\in\ZZ$ and $0\leq e_i\leq r_i$ if $r_i&lt;\infty$,
+and the tuple $(e_1,\dotsm,e_n)$ is unique to $g$.
+This tuple determines the <em>normal form</em> $g_1^{e_1}\dotsm g_n^{e_n}$ of $g$.</p>
+
+<p>Observe $\size G = r_1\dotsm r_n$.
+The <em>Hirsch length</em> of $G$ is
+	$$ h(G) = \# \{i\in\{1,\dotsc,n\}\mid r_i=\infty\}. $$
+(The number of finite indices is not an invariant.)</p>
+
+<p><a id="thm-pcp">2</a>) Theorem.
+For each pcgs $(g_1,\dotsc,g_n)$ with relative orders $(r_1,\dotsc,r_n)$
+there exist $e_{ij},e_{ijk},\overline{e_{ijk}}\in\ZZ$ such that
+the following defines a <em>polycyclic presentation</em> (<strong>pcp</strong>)
+	$$ \langle g_1,\dotsc,g_n \mid \begin{cases}
+		g_i^g = g_{j+1}^{e_{i,j,j+1}} \dotsm g_n^{e_{ijn}}, j\lt i \\\
+		g_i^{g_j^{-1}} = g_{j+1}^{\overline{e_{i,j,j_1}}} \dotsm g_n^{\overline{e_{ijn}}}, j\lt i \\\
+		g_i^{r_i} = g_{j+1}^{e_{i,i+1}} \dotsm g_n^{e_{in}},  r_i\neq \infty \end{cases}
+		\rangle $$
+(where in the above expression,
+by abuse of notation, the $g_i$ are abstract generators
+which are not the same as the group elements $g_i$)
+and this presentation defines $G$.
+It allows effective computations in $G$.
+(The second line of relations can always be ommitted if $G$ is finite.)</p>
+
+<h3>Polycyclic presentations</h3>
+
+<p>A pcp in which the third set of relations reads
+	$$ g_i^{s_i} = g_j+1^{e_{i,i+1}} \dotsm g_n^{e_{in}},  s_i\neq \infty $$
+is <em>consistent</em> if $s_i =\size{g_i}$ for all $i$.</p>
+
+<p>If a presentation is consistent,
+then the normal form is well-defined
+and this makes it possible to solve the word problem in $G$
+(with respect to this set of generators).</p>
+
+<p><em>Collection</em> computes the word in normal form
+by rewriting an expression in the generators using the relations of Theorem <a href="#thm-pcp">2</a>.</p>
+
+<p><strong>Example</strong>.
+The infinite dihedral group $D_{\infty}$ is available in GAP as</p>
+
+<pre><code> gap&gt; DihedralPcpGroup(0);
+ Pcp-group with orders [ 2, 0 ]</code></pre>
+
+<p>and has presentation
+	$$ \langle g_1,g_2 \mid g_1^2 = 1, g_2^{g_1} = g_2^{-1} \rangle. $$</p>
+
+<p>Polycyclic presentations make it easy to find certain group-theoretic properties,
+like derived subgroups, centers, nilpotency and abelian invariants.
+For example, this can be helpful when working with matrices over the integers.</p>
+
+<p>It is also possible to start with a pcp and try to determine the group.
+GAP has some functionality for this; see 
+<code>FromTheLeftCollector(n)</code>, <code>SetRelativeOrder(C,i,j)</code>, <code>SetConjugate(C,i,j,tup)</code>, <code>IsConfluent(C)</code>
+and <code>PcpGroupByCollector(C)</code>.</p>
+
+<h3>Subgroups</h3>
+
+<p>If $U$ is a subgroup of $G$,
+we can compute an <em>induced generating sequence</em> of the form
+$$ \begin{gather}
+	u_1 = g_1^{f_{11}} \dotsm g_n^{f_{1n}} \\
+	\dotsc \\
+	u_s = g_1^{f_{s1}} \dotsm g_n^{f_{sn}}
+\end{gather} $$
+which defines a $s\times n$-matrix over $\ZZ$,
+conjugate to an upper-triangular matrix.
+Then $(u_1,\dotsc,u_s)$ is a pcgs for $U$.</p>
+
+<h2 count="2">2. Finite soluble groups</h2>
+
+<p>The finite polycyclic groups are exactly the finite soluble groups.
+The infinite polycyclic groups are exactly the infinite soluble groups
+whose subgroups are finitely generated.
+In this part, we look at the finite polycyclic groups;
+the infinite case will be treated in the next.</p>
+
+<p>Let $G$ be a finite polycyclic group.
+Without loss of generality, we may assume additionally</p>
+
+<ol><li>that the relative orders $r_1,\dotsc,r_n$ are prime
+(by refining our subnormal chain to maximal length),</li><li>that there exist $w_1,\dotsc,w_s$ for which $G_{w_i}$ is normal (characteristic) in $G$
+and that $G_{w_i}/G_{w_{i+1}}$ is elementary abelian.</li></ol>
+
+<p>As useful notation, set $N = G_2$, that is, a maximal subgroup of prime index,
+and set $A = G_{w_{s-1}}$ a maximal elementary abelian normal (characteristic) subgroup in $G$.</p>
+
+<h3>Orbit-stablisers</h3>
+
+<p><a id="lem-os">3</a>) Lemma.
+Suppose $G$ acts on $\Om$, $\om\in\Om$, $S = \Stab_N(\om)$. Then</p>
+
+<ol><li>case: $\om^{g_1} \in \om^N$ implies that
+$\om^G = \om^N$ and $\Stab_G(\om)=\langle S,g_1x\rangle$
+where $\om^{g_1} = \om^{x^{-1}}$ for $x\in N$.</li><li>case: $\om^{g_1}\not\in\om^N$ implies that
+$\om^G = \dot\cup_{i=0}^{r_i-1}(\om^N)^{g_1^i}$
+and $\Stab_G(\om) = S$.</li></ol>
+
+<h3>Sylow subgroups</h3>
+
+<p>Given $G$ and a prime $p$, one can determine a Sylow $p$-subgroup of $G$
+by induction up the subnormal series.
+Then we may assume that $S$ is a Sylow $p$-subgroup of $N$ is given.
+Recall that $N$ is normal of prime index.</p>
+
+<ol><li>case: if $r_1 = [G:N] \neq p$ then $S$ is a Sylow $p$-subgroup of $G$.</li><li>case: $r_1 = p$. Then a Sylow $p$-subgroup of $G$ has the form
+$\langle S,g_1x\rangle$ for some $x\in N$.</li></ol>
+
+<p>In the latter case, $x$ may be determined by induction down the normal series,
+and so we may assume that $x$ modulo $A$ is determined, that is,
+$\langle S,g_1x\rangle A/A$ is a Sylow $p$-subgroup in $G/A$.</p>
+
+<ol><li>case: if $A$ is an elementary abelian $p$-group then $A\leq S$
+and $\langle S,g_1x\rangle$ is a Sylow $p$-subgroup of $G$.</li><li>case: $A$ is an elementary abelian $q$-group for $q\neq p$.</li></ol>
+
+<p>In the latter case, we may use the following lemma.</p>
+
+<p><a id="lem-det-x">4</a>) Lemma.
+Let $S = \langle s_1,\dotsc,s_r\rangle$.
+Then $[s_j,g_1x] = t_ja_j$, for $t_j\in S$ and $a_j\in A$.
+Also $(g_1x)^p = ta$.
+If $y\in A$ with $t_j=[y,s_j^{g_1x}]$ and $t = (y^{(g_1x)^{p-1}}y^{(g_1x)^{p-2}}\dotsm y)^{-1}$,
+then $\langle S,g_1xy\rangle$ is a Sylow $p$-subgroup of $G$.</p>
+
+<p>The advantage of this lemma is that
+the criteria lie entirely in $A$,
+and hence the methods of linear algebra are available.
+In particular, a solution may easily be found using Gauss over $\FF_q$.</p>
+
+<p>This solves the problem in all cases.
+Many other approaches have the same inductive flavour.</p>
+
+<h3>Automorphism groups</h3>
+
+<p>Given $G$, compute $\Aut(G)$,
+or at least its generators and its order.
+By induction we may assume we have $\Aut(G/A)$,
+where $A$ is the characteristic elementary abelian subgroup as above.</p>
+
+<p><a id="thm-auts">5</a>) Theorem.
+There exists a homomorphism
+	$$\begin{align} \rho:\Aut(G) &amp; \to \Aut(G/A)\times\Aut(A) \\
+		\al &amp; \mapsto (\al\rvert_{G/A},\al\rvert_A) \end{align} $$
+with $\ker(\rho) \cong Z^1(G/A,A)$.</p>
+
+<p>Determine $\im(\rho)$.
+Recall that $G$ acts on $A$ by conjugation
+and this induces a homomorphism $G/A\to\Aut(A)$.
+We write this using bar notation.
+Define the set of compatible pairs
+	$$ \op{Comp}(G,A) = \{ (\bt,\gm)\in\Aut(G/A)\times\Aut(A)
+	\mid \overline{\bt(g)} = \gm^{-1}\overline g\gm \forall g\in G/A \}. $$
+Now $\Aut(G/A)$ is known inductively
+and $\Aut(A)$ is $GL_d(p)$.
+The compatible pairs $\op{Comp}(G,A)$ act on $Z^2(G/A,A)$ where,
+for $\dl\in Z^2(G/A,A)$,
+	$$ (\bt,\gm):\dl\mapsto\gm(\dl(\bt^{-1}(g),\bt^{-1}(h))). $$</p>
+
+<p>Suppose $G$ is an extension of $A$ by $G/A$ via $\dl+B^2(G/A,A) = [\dl]$.
+Then $\im(\rho) = \Stab_{\op{Comp}(G/A,A)}([\dl])$.</p>
+
+<h2 count="3">3. Infinite polycyclic groups</h2>
+
+<p>In finite polycylic groups, every problem is decidable,
+and very many problems have effective solutions.
+(Effective means that, even though there is no complexity analysis,
+the methods can be very fast.
+[The word problem has no good complexity analysis,
+and this, via collection, is fundamental to our method.])</p>
+
+<p>In infinite polycyclic groups,
+there are undecidable problems (mostly somewhat exotic),
+problems whose decidability is not known
+(such as the determination of a minimal generating set),
+decidable problems for which no effective algorithms are available
+(such as the determination of the automorphism group,
+where our stabiliser methods are not applicable
+since orbits may be infinite),
+and of course problems with known effective solutions
+(of which there are still many,
+including the word problem solved by collection,
+conjugacy problems,
+finite-index subgroups,
+some finite subgroups,
+and the $H^2$, $H^1$, $H^0$ cohomology groups).</p>
+
+<h3>Examples!</h3>
+
+<ul><li>$\langle a,b \mid a^2 =1, b^a = b^{-1} \rangle \cong D_\infty$</li><li>$\langle a,b \mid a^2 =1, b^a = b \rangle \cong C_2\times C_\infty$</li></ul>
+
+<p>Groups can be found from algebraic number fields:
+Let $K$ be an algebraic number field, $[K:\QQ] = n$,
+$M$ the maximal order of $K$
+(so that, as an additive group, $(M,+)\cong\ZZ^n$), and
+U the unit group of $K$ (a finitely generated abelian group).
+Then $M\rtimes U$ is infinite polycyclic,
+where $U$ acts by multiplication on $M$.
+Hence one often needs some algebraic number theory
+for working with infinite polycyclic groups.</p>
+
+<p>Crystallographic groups:
+take $T \unlhd G$ with $T \cong \ZZ^d$ and $G/T$ finite;
+then $G$ is polycylic if and only if $G/T$ is soluble.</p>
+
+<h3>Conjugacy problem</h3>
+
+<p>Given $G$ polycyclic with pcp,
+and $g,h\in G$,
+does there exist $x\in G$ such that $g^x = h$?
+The dual problem is to determine $C_G(g)$.</p>
+
+<p>Use induction down the normal series of the form
+	$$ G = G_1 \rhd G_2 \rhd \dotsm \rhd G_\ell \rhd G_{\ell+1} = 1 $$
+with $G_i\lhd G$ and every $G_i/G_{i+1}$ either elementary abelian or free abelian.
+Again set $A = G_\ell$,
+and assume that the problem is solved in $G/A$,
+that is, we found some $y\in G$ such that $g^y = h$ modulo $A$,
+and $C_G/A(gA)$ has been found too.
+Fix the subgroup $C\leq G$ such that $C/A = C_G(gA)$.
+Replace $h$ by $h^{y^{-1}}$.
+Then $gA = hA$ and therefore $g^{-1}h = a \in A$.</p>
+
+<p><a id="lem-conjugacy">6</a>) Lemma.
+Consider $\dl:C\to A,c\mapsto [g,c]$.</p>
+
+<ol><li>$\dl$ is a derivation, that is, $\dl(cd) = \dl(c)^d\dl(d)$,</li><li>$C_G(g) = \ker\dl$,</li><li>there exists $x\in G$ such that $g^x = h$
+if and only if there exists $x\in C$ with $g^x = h$
+if and only if $a \in \im\dl$,
+and then $a = \dl(x)$.</li></ol>
+
+<p>$A$ is either elementary abelian or free abelian,
+in the former case, $A$ can be identified with the vector space $\FF_p^d$,
+in the latter, with the lattice $\ZZ^d$.
+Set $R = \FF_p$ if $A$ is elementary abelian
+and $R = \ZZ$ if $A$ is free abelian.
+Let $\rho:G\to\Aut(A)$ denote the conjugacy action of $G$ on $A$.
+Note $\Aut(A) = GL_d(R)$.
+Define $\al:C\to GL_{d+1}(R)$ by
+	$$ c\mapsto
+	\begin{pmatrix}
+		&amp; &amp; &amp; 0 \\
+		&amp; \rho(c) &amp; &amp; \vdots \\
+		&amp; &amp; &amp; 0 \\
+		&amp; \dl(c) &amp; &amp; 1 \end{pmatrix}. $$
+Then $\ker(\dl) = \Stab_C(0,0,\dotsc,0,1)$
+and $\im(\dl) = \op{Orbit}_C(0,0,\dotsc,0,1)$.
+In this special case of $A = \ZZ^d$,
+orbits and stabilisers can still be determined,
+despite being infinite.</p>
+
+<h3>Finite subgroups</h3>
+
+<p>There are only finitely many conjugacy classes of finite subgroups
+(but each class is infinite).
+$G$ has a torsion subgroup $T=T(G)$
+if there exists a unique maximal finite subgroup;
+otherwise, the collection of finite-order elements
+is not closed under multiplication,
+and we say $T(G)$ does not exist.
+For example, $D_\infty$ has two maximal subgroups
+$\langle a\rangle^{D_\infty},\langle ab\rangle^{D_\infty}$,
+so it is torsion-free.
+$T(G)$ is nontrivial if $G$ is nilpotent.</p>
+
+<p>To compute these, we induct up a subnormal series with cyclic factors
+(as given in the pcp).
+Let $N\lhd G$ with $G/N$ cyclic and either infinite or of prime order.
+We have $T(N)$ determined by induction.</p>
+
+<p><a id="thm-torsion">7</a>) Theorem.</p>
+
+<ol><li>If $T(G)$ exists then $T(N) = T(G)\cap N$.</li><li>If $G/N\cong\ZZ$ then $T(G) = T(N)$.</li><li>If $G/N\cong C_p$ then either
+	there exists no complement to $N/T(N)$ in $G/T(N)$
+	and so $T(N) = T(G)$, or
+	there exists a unique complement $K$,
+	and so $T(G) = K$, or
+	if there are several complements,
+	there are several maximal subgroups
+	and hence $T(G)$ does not exist.</li></ol>
+
+<p>Computing complements is a cohomology question
+and hence reduces to solving linear equations,
+which is doable even in the infinite groups.</p>
+
+<h2 count="4">4. The $p$-groups</h2>
+
+<p>$p$-groups are an interesting special case of polycyclic groups,
+and many of our methods are even more effective for $p$-groups.</p>
+
+<p>A classification of $p$-groups of low order is easy.
+There are $1,2,5,15$ groups of order $p,p^2,p^3,p^4$
+(or $14$ groups of order $2^4$).
+The number of $p$-groups of orders $p^5$, $p^6$, $p^7$
+has been determined as a polynomial in $p$,
+where some terms involve lowest common denominators.
+But the expressions are complicated
+and (extremely) difficult to find.
+(This problem is well-known for incorrect classification attempts.)</p>
+
+<p>Higman's Porc conjecture is that the number $f(n)$ of groups of rder $p^n$
+is a <strong>po</strong>lynomial in <strong>r</strong>esidue <strong>c</strong>lasses,
+if $p$ is large enough.
+(Some recent research by du Sautoy suggests that this may not be the case.)</p>
+
+<p>How does one generate the groups of order $p^n$?
+$p$-group generation (due to Newman and O'Brien)
+takes an inductive approach on <em>descendants</em>.
+Suppose that $G$ is a $p$-group, for a fixed $p$,
+with a central characteristic series of elementary abelian factors.
+$H$ is a descendant of $G$ if and only if $H/H_e \cong G$
+and $H_{e+1}$ is the trivial group.</p>
+
+<p>An improvement (Eick &amp; O'Brien)
+is to consider families of $p$-groups for $p$ a variable,
+and then consider descendants.</p>
+
+<p>Similar to the problem of determining automorphism groups,
+it all boils down to orbit-stabiliser methods under the action of $\Aut G$.
+(These cannot be easily generalised to nonfixed $p$.
+One way of getting around this is to replace
+$p$-groups with multiplicative structure
+by Lie rings with additive structure.)</p>
+
+<h3>Coclass</h3>
+
+<p>An approach to classification is to divide cases by coclass
+instead of by the order of the group.
+The <em>coclass</em> of $G$ of size $p^n$ is $n - c$,
+where the <em>class</em> $c$ of $G$ is the length of its lower central series.
+The <em>coclass graph</em> $\Gm(p,r)$
+has vertices which are groups of order $p^n$
+and coclass $r$, up to isomorphism.
+The vertices can be graded by <em>level</em>,
+where groups of order $p^n$ sit in level $n$.
+There is an edge between $G$ and $H$
+if there exists $N\lhd H$ with $\size N = p$ and $H/N\cong G$.
+Of course $\Gm(p,r)$ is infinite;
+furthermore it is a forest.</p>
+
+<p>Suppose that $G = G_0,G_1,\dotsc$ is an infinite path in $\Gm(p,r)$.
+Let $T_G$ be the full tree of descedants of $G$ in $\Gm(p,r)$.
+Then $T_G$ is a <em>coclass tree</em> if and only if
+it contains exactly one infinite path.
+Every infinite path defines an infinite pro-$p$ group
+$P = \lim G_i$, also of coclass $r$.</p>
+
+<p>A deep theorem by Leedham-Green, Shalev and Zelmanov states that
+there are only finitely many infinite pro-$p$-groups of coclass $r$
+(and hence only finitely many infinite paths in the coclass graphs),
+every infinite prop-$p$-group of coclass $r$ corresponds
+to a coclass tree in $\Gm(p,r)$,
+and that $\Gm(p,r)$ hence only consists of
+finitely many coclass trees, and finitely many other groups.</p>
+
+<p>The number of infinite pro-$p$-groups of given coclass
+can be asymptotically estimated
+(and is rather large).</p>
+
+<h3>Gardening</h3>
+
+<p>If $T_G$ is a coclass tree,
+let $B_i$ be the subtree of $T_G$
+of all descendants of $G_i$ which are not descendants of $G_{i+1}$.
+Also set $B_{i,k}$ to be the subtree of $B_i$
+of nodes at distance at most $k$ from the root $G_i$.
+Then $B_{i,k}$ is a <em>branch</em> of $T_G$.
+(Gardening metaphor thanks to du Sautoy.)</p>
+
+<p><a id="thm-periodicity">8</a>) Theorem.
+The branches begin to repeat, that is,
+for every $k$ there exist $d$ and $l = l(k)$
+such that $B_{i,k} \cong B_{i+d,k}$
+for all $i\geq l$.</p>
+
+<p>Conjectured by Newman and O'Brien in 1999,
+proved by du Sautoy in 2001 using zeta functions
+and by Eick and Leedham-Greene using group theory in 2006.
+This allows the definition of <em>infinite coclass families</em>.</p>
+
+<p>For $p=2$, there exists $k=k(r)$ such that $B_i = B_{i,k}$,
+that is, the branches stop growing.
+In the odd-prime case, the periodicity is less well-understood.
+The original conjecture was inspired by computation results;
+current computational methods are not strong enough
+to inspire conjectures in this harder case.</p>
+
+<h3>Algorithms</h3>
+
+<p>The infinite pro-$p$-group $P$ of coclass $r$
+is somewhat understood by algorithmic methods.
+The key problem is determining
+the $p$-adic (rational) space groups of coclass $r$.
+But the numbers get large rather quickly.
+One approach is to (use GAP to) construct finite parts of $T_G$ from $P$.</p>
+
+<p><a id="thm-eick-ld">9</a>) Theorem.
+The groups in an infinite coclass family
+can be described by a single parametrised (polycyclic!) presentation.
+In particular, the $2$-groups of coclass $r$
+can be classified by finitely many presentations.</p>
+
+<p>It is conjectured that the order of a nonabelian $p$-group
+divides the order of its automorphism group.
+Since the automorphism groups of the groups
+in an infinite coclass family are periodic,
+there are at most finitely many counterexamples to this conjecture
+among the $2$-groups of coclass $r$.</p>
+
+<p>Another application is to the old problem of
+finding all $p$-groups with trivial Schur multiplicator.
+Among odd $p$-groups of coclass $r$,
+there are at most finitely many with trivial Schur multiplicator;
+among $2$-groups of coclass $r$ there are infinite coclass families
+with trivial Schur multiplicator.</p>
+
+<p>Notes by <a href="http://web.mat.bham.ac.uk/~rehrenf/"> Felix Rehren</a> /
+  	<a href="mailto:rehrenf@maths.bham.ac.uk">
+			<em>rehrenf@maths.bham.ac.uk</em></a></p>
+
+<p>Based on a course by Bettina Eick<br />
+<em></em>July 29th to August 2nd 2013, St Andrews</em></p>

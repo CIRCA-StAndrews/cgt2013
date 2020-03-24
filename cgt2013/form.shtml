@@ -1,0 +1,57 @@
+<html><head><title>Groups St Andrews</title> 
+</head>
+<body bgcolor="ffffcc">
+
+<!--#include FILE="header.inc" -->
+
+<center>
+<font size=+2>Groups St Andrews 2013<br>
+Note your interest
+</font>
+
+<!--#include FILE="sidebar.inc" -->
+
+</center>
+<p>
+Please fill in the form below and press the <b>Submit form</b> button at the bottom.<br>
+Your e-mail address will be added to the list of
+those who receive updates about the conference. 
+</p>
+
+<p align=justify>
+Your name and affiliation, but not your email address, will be published
+<a href="./plans.shtml">here</a>. Please note that this list is
+not automatically updated following completion of this form due to the unfortunate risk of spam.
+
+
+<p>
+<i>I would like to note my interest in Groups St Andrews </i>2013.
+<hr>
+
+<FORM METHOD=POST ACTION="http://www.groupsstandrews.org/groups-cgi/groups2013.cgi">
+<input type="hidden" size=80  name="whichform" value="interest">
+<p>
+Name<br>
+<input type="text" size=80  name="name">
+<p>
+e-mail address<br>
+<input type="text" size=80  name="email">
+<p>
+University<br>
+<input type="text" size=80  name="affiliation">
+<p>
+Any message you would like to send us<br>
+<textarea cols=76 rows=5  name="other">
+</textarea>
+<p>
+
+<input type="submit" value="Submit form">
+<input type="reset" value="Reset all answers">
+</form> 
+
+<hr>
+<font size=+2>Thank you</font>
+<p>
+Back to the <a href=./index.shtml>Groups 2013 web-site</a>
+</body>
+</html>

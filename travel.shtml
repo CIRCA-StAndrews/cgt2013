@@ -1,0 +1,48 @@
+<html><head><title>Travel</title></head>
+
+<!--#include FILE="header.inc" -->
+
+<center><h2>Travel and Arrival</h2></center>
+<p align=justify>
+
+<!--#include FILE="sidebar.inc" -->
+
+<h3>Travel information</h3>
+
+<p align=justify>
+The University website has excellent information on
+<a href="http://www.st-andrews.ac.uk/visiting/gettingtostandrews/">
+travelling to St Andrews</a> by various means.
+</p>
+
+<h3>Arrival</h3>
+<p>Arrival day is Sunday 28th July. Participants should go straight to
+their <a href="accommodation.shtml">accommodation</a>.
+</p>
+
+<p>Lectures will be held in the
+<a
+href="https://maps.google.co.uk/maps?q=google+maps+mathematical+institute+university+of+st+andrews&ie=UTF-8&hq=&hnear=0x4886578328b26b69:0x266c96e102530f78,Mathematical+Institute,+Fife&gl=uk&ei=AGyeUJunNsaN0wXe0oDwCQ&ved=0CCAQ8gEwAA">
+Mathematical Institute</a>.
+</p>
+
+On arrival in the town, the University website
+<a href="http://www.st-andrews.ac.uk/maps/">maps</a>
+will be useful, as will other pages in the section on
+<a href="http://www.st-andrews.ac.uk/visiting/">visiting St Andrews</a>.
+
+<h3 id="diversions">Diversions</h3>
+<p>St Andrews has many local attractions which include the golf
+courses (the Women’s Open Golf Tournament will run in the town towards
+the end of the course week), the ’Chariots of Fire’ beach recently
+featured in the Opening Ceremony for the London 2012 Olympics, St
+Andrews Castle and Cathedral, the architecture of the historic town
+itself, local museums, nearby fishing villages and much more.</p>
+
+<p>Wednesday afternoon in particular is left free for
+exploration. There will be a free workshop dinner on Tuesday evening
+and at least one other organised social evening at a local pub.</p>
+
+</table>
+
+</body></html>

@@ -1,0 +1,21 @@
+<html><head><title>Registration</title></head><body bgcolor=#ffffcc><br>
+
+<!--#include FILE="header.inc" -->
+
+<center><h2>Registration and Payments</h2></center>
+
+<!--#include FILE="sidebar.inc" -->
+
+<h3>Registration:</h3>
+
+<p align=justify>
+Registration is not yet available.
+</p>
+<p>
+However, you can <a href="./form.shtml">note your interest</a>
+in Groups St Andrews 2013 to receive updates about the conference by email.
+</p>
+
+</table>
+
+</body></html>

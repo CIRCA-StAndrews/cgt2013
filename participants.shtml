@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Information for Participants</title>
+</head>
+
+<!--#include FILE="./header.inc" -->
+<center><h2>Information for Participants after Arrival</h2></center>
+<!--#include FILE="./sidebar.inc" -->
+
+<h3>Accommodation</h3>
+If you are using the course accommodation in McIntosh Hall and are staying on to attend 
+<a href="http://www.groupsstandrews.org/2013">Groups St Andrews 2013</a> then you need to have booked
+and paid for the night of Friday August 2nd, which is not part of the standard accommodation
+package for either event. If you are in that situation, contact the local organisers asap, by email
+to <a href="mailto:cgt2013@mcs.st-and.ac.uk">cgt2013@mcs.st-and.ac.uk</a> or in person at the course
+on Monday.
+</p>
+
+<h3>Location</h3>
+<p>
+Lectures and Lab sessions will take place in the Mathematical Institute - building 14 (square F3) on 
+<a href="http://www.st-andrews.ac.uk/media/university/maps/wwwmap.pdf">this map</a>.
+</p>
+
+<h3>Registration</h3>
+<p>
+The first talk is scheduled for 09.00 on Monday morning. A registration / information desk will be open 
+from 08.45 in the area
+outside the course lecture theatre (signposted in the Institute) on level three of the building. Participants can
+register, pick up login details, etc, throughout the morning or at any time via an organiser.
+</p>
+
+<h3>Computer facilities</h3>
+<p>
+Participants bringing their own laptop are encouraged to configure (in advance) and use Eduroam, if it is available to them. 
+We cannot arrange Eduroam access for participants who do not have it configured in advance at their home institution
+but will in such cases provide visitor access to local wifi.
+</p>
+
+<p>
+Lab sessions will run in a University computer lab. The PCs in the lab can be accessed by participants using a guest
+login account available from the organisers. These PCs have an ssh client 'PuTTY' which can then be used to access
+local servers running GAP. Login details for the local servers will be provided by announcement during the first lab
+session.
+</p>
+
+<h3>Lecture materials</h3>
+Will be added gradually as they become available. See the
+<a href="./lectures.shtml">Lectures and Worksheets page</a> on this site.
+
+<h3>Special Lectures</h3>
+<p>
+The special lectures will be as follows:<br>
+Tuesday, 2pm: "Distributed Computations with GAP", Alexander Konovalov (St Andrews)<br>
+Thursday, 2pm: "Algorithmic Generalisations of Small Cancellation Theory", Richard Parker
+</p>
+
+<h3>Extra Sessions</h3>
+<p>
+Thanks to feedback provided by the participants, we have arranged to offer two additional sessions. These sessions
+will run in the lecture theatre in parallel to the lab session on Thursday afternoon. Obviously, attendance at
+either extra session or the lab session is entirely optional.
+</p>
+
+<p>
+Alexander will first (3.30pm) give an introductory talk on the subject of "How to Write a GAP Package". At 4pm,
+Max Neunhöffer will introduce "GAP Types, Objects and Method Selection".
+</p>
+
+<p>
+Further suggestions provided by participant feedback will be addressed during the lab session.
+</p>
+
+<h3>Travel Grants</h3>
+<p>
+The LMS has some small grants available to non-UK postgraduates to partially fund their travel to this course. The organisers are
+required to recommend applicants for these grants to the LMS. We would like to hear from eligible participants who are in some way 
+'self-funded' as we would prefer to recommend people in such situations, for these grants. Please speak to John McDermott or Angela Miguel 
+- or send email explaining your circumstances to the course address. We need to hear from you asap!
+</p>
+
+<h3>Social</h3>
+<p>
+The course dinner is on Tuesday evening. Note that the time of <b>7pm</b> has been brought forward compared to the 
+first version of
+the timetable. The location is "Zizzi's" restaurant on South St. See the following map:<br>
+
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=zizzi+st+andrews&amp;sll=56.339778,-2.794195&amp;sspn=0.00641,0.01575&amp;ie=UTF8&amp;hq=zizzi&amp;hnear=St+Andrews,+Fife,+United+Kingdom&amp;t=m&amp;ll=56.339778,-2.794195&amp;spn=0.006295,0.006295&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.uk/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=zizzi+st+andrews&amp;sll=56.339778,-2.794195&amp;sspn=0.00641,0.01575&amp;ie=UTF8&amp;hq=zizzi&amp;hnear=St+Andrews,+Fife,+United+Kingdom&amp;t=m&amp;ll=56.339778,-2.794195&amp;spn=0.006295,0.006295" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+</p>
+
+<h4>What to do in St Andrews</h4>
+<p>
+Wednesday afternoon is left free to explore St Andrews - or further afield! We gather a few suggestions in the 
+<a href="./whattodohere.shtml">Things to do in St Andrews</a> page. If you are interested
+in any of these - particularly those for which we have not yet provided links - please just chat to one of the local organisers.
+<p>
+
+</body>
+</html>

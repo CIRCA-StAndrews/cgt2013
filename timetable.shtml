@@ -1,0 +1,198 @@
+<html><head>
+<title>Timetable</title>
+</head>
+
+<!--#include FILE="header.inc" -->
+
+<center><h2>Academic and Social Timetable</h2></center>
+
+<!--#include FILE="sidebar.inc" -->
+
+Lectures and laboratory sessions take place in the Mathematical Institute.
+
+<h3 id="timetable">Timetable</h3>
+<p></p>
+<table class="timetable">
+<tbody>
+
+  <tr class="odd">
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"><strong>Sunday</strong></td>
+    <td class="timetable" align="center"><strong>Monday</strong></td>
+    <td class="timetable" align="center"><strong>Tuesday</strong></td>
+    <td class="timetable" align="center"><strong>Wednesday</strong></td>
+    <td class="timetable" align="center"><strong>Thursday</strong></td>
+    <td class="timetable" align="center"><strong>Friday</strong></td>
+  </tr>
+
+  <tr></tr>
+
+  <tr class="even">
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"></td>
+  </tr>
+  
+  <tr class="odd">
+    <td class="timetable" align="center">09.00 - 10.00</td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center">Hulpke</td>
+    <td class="timetable" align="center">Hulpke</td>
+    <td class="timetable" align="center">Eick</td>
+    <td class="timetable" align="center">Holt</td>
+    <td class="timetable" align="center">Neunhöffer</td>
+  </tr>
+  
+  <tr class="even">
+    <td class="timetable" align="center">10.00 - 11.00</td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center">Eick</td>
+    <td class="timetable" align="center">Eick</td>
+    <td class="timetable" align="center">Hulpke</td>
+    <td class="timetable" align="center">Hulpke</td>
+    <td class="timetable" align="center">Holt</td>
+  </tr>
+  
+  <tr class="odd">
+    <td class="timetable" align="center">11.00 - 11.30</td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"><em>Coffee</em></td>
+    <td class="timetable" align="center"><em>Coffee</em></td>
+    <td class="timetable" align="center"><em>Coffee</em></td>
+    <td class="timetable" align="center"><em>Coffee</em></td>
+    <td class="timetable" align="center"><em>Coffee</em></td>
+  </tr>
+  
+  <tr class="even">
+    <td class="timetable" align="center">11.30 - 12.30</td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center">Holt</td>
+    <td class="timetable" align="center">Neunhöffer</td>
+    <td class="timetable" align="center">Holt</td>
+    <td class="timetable" align="center">Neunhöffer</td>
+    <td class="timetable" align="center">Eick</td>
+  </tr>
+  
+  <tr class="odd">
+    <td class="timetable" align="center">12.30 - 14.00</td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"><em>Lunch</em></td>
+    <td class="timetable" align="center"><em>Lunch</em></td>
+    <td class="timetable" align="center"><em>Lunch</em></td>
+    <td class="timetable" align="center"><em>Lunch</em></td>
+    <td class="timetable" align="center"><em>Lunch</em></td>
+  </tr>
+  
+  <tr class="even">
+    <td class="timetable" align="center">14.00 - 15.00</td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center">Neunhöffer</td>
+    <td class="timetable" align="center">Special lecture 1<br>Konovalov</td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center">Special lecture 2<br>Parker</td>
+    <td class="timetable" align="center"></td>
+  </tr>
+  
+  <tr class="odd">
+    <td class="timetable" align="center">15.00 - 15.30</td>
+    <td class="timetable" align="center"><strong>Arrival</strong></td>
+    <td class="timetable" align="center"><em>Tea</em></td>
+    <td class="timetable" align="center"><em>Tea</em></td>
+    <td class="timetable" align="center"><strong>Free</strong></td>
+    <td class="timetable" align="center"><em>Tea</em></td>
+    <td class="timetable" align="center"><strong>Departure</strong></td>
+  </tr>
+  
+  <tr class="even">
+    <td class="timetable" align="center">15.30 - 17.00</td>
+    <td class="timetable" align="center"><strong>Day</strong></td>
+    <td class="timetable" align="center">Lab time</td>
+    <td class="timetable" align="center">Lab time</td>
+    <td class="timetable" align="center"><strong>Afternoon</strong></td>
+    <td class="timetable" align="center">Lab time /<br>Extra sessions*</td>
+    <td class="timetable" align="center"><strong>Day</strong></td>
+  </tr>
+  
+  <tr class="odd">
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"></td>
+  </tr>
+  
+  <tr></tr>
+  
+  <tr class="even">
+    <td class="timetable" align="center">19.00 - 21.00</td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center">Dinner (Zizzi)</td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"></td>
+    <td class="timetable" align="center"></td>
+  </tr>
+  
+</tbody>
+</table>
+
+<p></p>
+A reminder that the lecture courses are as follows:
+
+  <table cellpadding=10>
+    <tr>
+    <td>Permutation Groups</td>
+    <td>Alexander Hulpke (Colorado State University)</td>
+    <td></td>
+    </tr>
+    <tr>
+    <td>Soluble Groups and p-groups</td>
+    <td>Bettina Eick (Technische Universität Braunschweig)</td>
+    <td></td>
+    </tr>
+    <tr>
+    <td>Matrix Groups/Constructive Recognition</td>
+    <td>Derek Holt (University of Warwick)</td>
+    <td></td>
+    </tr>
+    <tr>
+    <td>Finitely Presented Groups</td>
+    <td>Max Neunhöffer (University of St Andrews)</td>
+    <td></td>
+    </tr>
+  </table>
+
+<p>
+  Also see the full
+  <a href="programme.shtml">programme details</a>.
+</p>
+  
+<h3>Extra Sessions</h3>
+<p>
+(*) The extra sessions, chosen based on participant feedback, are provided in parallel to the lab session on 
+Thursday afternoon and are as follows:<br>
+<ul><li> 3.30pm: "How to Write a GAP Package" (Konovalov)
+</li><li> 4.00pm: "GAP Types, Objects and Method Selection" (Neunhöffer)
+</li></ul>
+</p>
+
+
+<h3>Social Events</h3>
+<p>
+<ul>
+  <li>The conference dinner will be on Tuesday evening, in Zizzi Restaurant, South St.
+  <li>Wednesday afternoon is left free to explore the town with the
+  possibility of an organised excursion.
+</ul>
+Further information about visiting the town is available from the
+<a href="travel.shtml">Travel and Arrival</a> section.
+</p>
+</table>
+
+</body></html>

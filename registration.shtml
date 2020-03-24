@@ -1,0 +1,58 @@
+<html><head><title>Registration</title></head>
+
+<!--#include FILE="header.inc" -->
+
+<center><h2>Registration and Payments</h2></center>
+
+<!--#include FILE="sidebar.inc" -->
+
+<h3>Registration</h3>
+
+<center><p><b>Please note that registration for this course is now closed!</b></p></center>
+
+<p align=justify>
+Applications should be made using the registration form available via the
+LMS website at: 
+<a href="http://www.lms.ac.uk/events/forthcoming-short-courses">
+http://www.lms.ac.uk/events/forthcoming-short-courses</a>.
+Research students, post-docs and those working in industry are invited to apply.
+</p>
+
+<p>
+The closing date for applications is Monday 17 June 2013.  Numbers will be
+limited and those interested are advised to make an early application. 
+</p>
+
+<p>
+<ul>
+<li>All applicants will be contacted within two weeks after the deadline; information about individual applications will not be available before then.
+<br>
+<li>In the event of over-subscription preference will be given to UK-based research students.
+</ul>
+</p>
+
+<h3>Fees</h3>
+<p>
+All research students registered at a UK university will be charged a registration fee of £100.  There will be no charge for subsistence costs.
+</p>
+
+<p>
+UK-based postdocs will be charged a registration fee of £250, plus half the subsistence costs (£125) £375 in total.
+</p>
+
+<p>
+All others (overseas students and postdocs, those working in industry) will be charged a registration fee of £250 plus the full subsistence costs (£250) £500 in total.
+</p>
+
+<p>
+All participants must pay their own travel costs (for EPSRC funded students, this should be covered by their DTA).  Fees are not payable until a place on the course is offered but will be due by Friday 28 June.
+</p>
+
+<p>
+Fees cover provided food and accommodation as detailed in the
+<a href="accommodation.shtml">Accommodation and Food section<a>.
+</p>
+
+</table>
+
+</body></html>

@@ -1,0 +1,194 @@
+<html><head>
+<title>Programme</title>
+</head>
+
+<!--#include FILE="header.inc" -->
+
+<center><h2>Programme</h2></center>
+
+<!--#include FILE="sidebar.inc" -->
+
+
+<h3 id="environment">Environment</h3>
+
+<p>St Andrews is a small
+and beautiful town with many attractions (see <a
+ href="http://www.standrews.co.uk/"><code
+class="url">http://www.standrews.co.uk/</code></a>). The University
+celebrated being 600 years old during 2012. The Centre for
+Interdisciplinary Research in Computational Algebra CIRCA (see <a
+ href="http://www-circa.mcs.st-and.ac.uk/"><code
+class="url">http://www-circa.mcs.st-and.ac.uk/</code></a>) is a
+thriving research centre, spanning the Schools of Computer Science and
+Mathematics.</p
+
+<p>The University of St Andrews is one of the Centres
+coordinating the world wide collaborative development of GAP (see <a
+ href="http://www.gap-system.org"><code
+class="url">http://www.gap-system.org</code></a>), described in more
+detail in the next section.</p>
+
+<h3 id="section">GAP</h3> <p>GAP is a system
+for computational discrete algebra, with particular emphasis on
+Computational Group Theory. GAP provides a programming language, a
+library of thousands of functions implementing algebraic algorithms
+written in the GAP language as well as large data libraries of algebraic
+objects. In this way, it provides a platform for computations, testing
+of new algorithms and mathematical experiments, as well as for
+publishing mathematical software in the form of packages.</p>
+
+<p>This underpins a “virtuous circle”, in which deeper understanding of
+underlying mathematics leads to better algorithms, which can be added
+to high quality software systems, with which we can run experiments
+whose results suggest new theoretical insights.</p>
+
+<p>GAP itself has
+been cited over 1700 times since 1997 and is one of the major tools
+for Computational Group Theory and Computational Representation
+Theory.</p>
+
+<h3 id="courses">Courses</h3>
+<p>We propose to have four lecture courses, rather than the usual
+three. This is, because there are four obvious main areas of
+computational group theory that any sensible overview must cover. Each
+course will consist of four one-hour lectures and each will be
+supported by practical classes, mainly in the computer lab using
+. There will also be two specialist “guest lectures”, focused more on
+the special interests of the lecturers and pointing towards current
+research. Since the four speakers are all experts on Computational
+Group Theory, they will be able to provide these two lectures as well,
+so that we do not need any further external speaker. The four courses
+will roughly cover the following topics:</p>
+
+<ol>
+<li><p>Permutation Groups (Alexander Hulpke)</p>
+<p>Permutation Groups have for a long time been a work horse for
+  computation in finite groups. Their algorithms combine — in the
+  modern “nearly linear” approach — close to optimal complexity with
+  good behaviour in practice. These algorithms are also fall back
+  methods for certain matrix groups or for work in quotients of
+  finitely presented groups.</p>
+  
+<p>The course will initially consider stabiliser chains (as subgroup
+  chains with cheap coset identification), the basic data structure
+  for working with permutation groups and which lets us answer the
+  fundamental tasks of group order, element containment and evaluation
+  of homomorphisms. Stabiliser chains also underlie backtrack search,
+  used to find elements or subgroups with particular properties. Block
+  systems and the classification of primitive groups yield an
+  algorithm for composition series that is the heart of the modern
+  approach to good complexity by sharing ideas from matrix groups and
+  solvable groups. The Trivial-Fitting approach is the current state
+  of the art for many higher level calculations such as classes of
+  elements or of subgroups or automorphism group computation.</p>
+</li>
+
+<li><p>Soluble Groups and <span class="math"><em>p</em></span>-Groups (Bettina Eick)</p>
+
+<p>This lecture course will be split into 5 parts: polycyclic
+presentations, finite soluble groups, infinite polycyclic groups,
+infinite nilpotent groups, and finite <span
+class="math"><em>p</em></span>-groups.</p>
+
+<p>Polycyclic presentations are the fundament for computations with
+finite soluble groups, <span class="math"><em>p</em></span>-groups or
+with polycyclic groups in general.</p>
+
+<p>Sylow systems, Hall subgroups and maximal subgroups are of special
+interest for the class of finite soluble groups. In this part of the
+course we show how to determine these effectively.</p>
+
+<p>For infinite polycyclic groups we show how to compute the torsion
+subgroup, if it exists, and we exhibit constructions to determine
+splittings in such groups. Further, we discuss some open algorithmic
+problems in this area.</p>
+
+<p>Hall polynomials can be used to facilitate a significantly improved
+multiplication in torsion free nilpotent groups. We discuss their
+computation as well as some applications, for example in the
+representation theory of infinite nilpotent groups.</p>
+
+<p>Coclass theory and Lie theory has introduced new algorithmic
+problems and methods in the area of finite <span
+class="math"><em>p</em></span>-groups. We discuss these and show how
+coclass theory and/or Lie theory can be used in the classification of
+<span class="math"><em>p</em></span>-groups and further
+applications.</p>
+</li>
+
+<li><p>Matrix Groups/Constructive Recognition (Derek Holt)</p>
+
+<p>This lecture course will be split into four major parts: Computing
+with finite simple groups, the composition tree algorithm for matrix
+groups, the solvable radical method for computing in finite groups,
+and the use of solvable radical methods with composition trees in
+matrix groups.</p>
+
+<p>For finite simple groups, we will discuss subdivision into
+alternating groups, sporadic groups, groups of Lie type, constructive
+and non-constructive recognition of finite simple groups (example:
+alternating and symmetric groups), standard generators, application to
+sporadic groups, base and strong generating set (BSGS) methods in
+matrix groups, the use of constructive recognition in sporadic groups
+to improve the choice of BSGS, recognition methods for groups of Lie
+type (black/grey/white box), and the use of presentations for the
+verification.</p>
+
+<p>In the second part about the composition tree algorithm for matrix
+groups we will start with an overview of the method, explain how to
+compute generators of the kernels and then discuss verification. We
+then continue with Aschbacher’s theorem and a summary of algorithms
+for finding Aschbacher decompositions before finishing with a
+discussion of how to process the leaves in the tree, using
+presentations for the verification of the complete tree.</p>
+
+<p>Part three is about the solvable radical method for computing in
+finite groups. We start with an overview of the method, discuss some
+examples of computations using this method like for example maximal
+subgroups, automorphism groups, Sylow subgroups, centralisers of
+elements, conjugacy classes and character tables, normalisers and
+conjugacy testing of subgroups.</p>
+
+<p>In the final part we discuss how to use the solvable radical method
+with composition trees for matrix groups. We show how to compute with
+outer automorphisms of simple groups, rearrange the composition
+factors in a composition tree, partially use BSGS methods for
+computing centralisers, etc. We conclude with a few outstanding
+problems and challenges.</p></li>
+
+<li><p>Finitely Presented Groups (Max Neunhöffer)</p>
+
+<p>This lecture course will start to discuss the word problem for
+finitely presented groups, discussing the impossibility of solving it
+with an algorithm. It then covers the following fundamental
+algorithms: Todd/Coxeter, Low Index, Abelian Invariants and
+Reidemeister-Schreier.</p>
+
+<p>A brief excursion into Small Cancellation Theory will then motivate
+rewrite systems, present Dehn’s Algorithm and lead to the Knuth-Bendix
+procedure. Time permitting, the course will cover automatic
+groups.</p>
+</li>
+
+</ol>
+
+<h3 id="lecturers">Lecturers</h3>
+<p>All four lecturers are experts in Computational Group Theory and
+have published in this area. They all have experience in teaching
+graduate students and have previously taught courses in Computational
+Group Theory successfully.</p>
+
+<h3 id="support">Support</h3>
+
+<p>We will have support for practical tutorials in the computing
+lab. At least one and usually two of the organisers will attend each
+practical session along with a postdoctoral assistant. The lab
+computers run an up-to-date GAP along with other mathematical software
+and ssh access from these to the  development servers may also be
+provided as required by the courses.</p>
+
+
+
+</table>
+
+</body></html>

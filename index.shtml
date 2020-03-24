@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>Computational Group Theory 2013</title>
+</head>
+
+<!--#include FILE="./header.inc" -->
+
+<!--
+<center>
+<img src="NorthStreetsmall.jpg"> 
+<p>
+<sub>Image copyright The University of St Andrews</sub>
+</p>
+  <p><h2>University of St Andrews, St Andrews, Scotland</h2></p>
+</center>
+-->
+ 
+<p align=justify>
+<center><h2>29th July - 2nd August 2013
+</h2></center>
+</p>
+
+<!--#include FILE="sidebar.inc" -->
+
+<h3>Latest news</h3>
+<p align=justify>
+  <ul>
+    <li>Friday afternoon - the course has ended. The organisers thank all the lecturers and participants for making it
+a highly successful event!
+    </li>
+  </ul>
+  <ul>
+    <li>Richard Parker "the man behind the MeatAxe" will give the second Special Lecture!
+    </li>
+  </ul>
+  <ul>
+    <li><a href="./lectures.shtml">Lecture notes and worksheets page</a> added.
+    </li>
+  </ul>
+  <ul>
+    <li>Special Lectures announced:<br>
+    Konovalov (Tuesday) - Distributed Computations with GAP<br>
+    Parker (Thursday) - Algorithmic Generalisations of Small Cancellation Theory
+    </li>
+  </ul>
+  <ul>
+    <li><a href="participants.shtml">Information for Participants after Arrival</a> added!
+    </li>
+  </ul>
+  <ul>
+    <li><b>Registration closed!</b>
+    </li>
+  </ul>
+</p>
+
+<h3>The Course</h3> 
+<p align=justify>
+  This LMS/EPSRC Short Instructional Course in Computational Group Theory 
+  is organised by the University of St Andrews and the 
+  London Mathematical Society.
+  It will take place between
+  <b>Sunday 28th July</b> (arrival day) and
+  <b>Friday 2nd August 2013</b> (departure day).
+  The talks will happen from 29th July to 2nd August 2013
+  (inclusive). This course is run in the week immediately preceding 
+  <a href="http://www.groupsstandrews.org/2013/">Groups St Andrews 2013</a> in St Andrews.
+</p>
+
+<h3 id="introduction">Introduction</h3>
+<p>Ever since their invention in the last century, computers have been
+used to study groups. During the past few decades this subject area
+has matured into the research field of Computational Group Theory,
+which aims to develop, analyse and implement algorithms to work with
+groups on a computer. Researchers in many are as (Algebra,
+Combinatorics, Number Theory to name but a few) have to solve concrete
+problems for groups or want to test conjectures involving
+groups. Computational Group Theory has evolved as a standard tool for
+them, but successfully applying the available software often requires
+some knowledge of the algorithms to ask the right question. Thus
+knowledge of Computational Group Theory techniques is a useful tool
+for many graduate students, even if their research is not exactly in
+this area.</p>
+
+<h3 id="objectives-of-the-course">Objectives of the Course</h3>
+<p>This course will introduce students to the four main areas of
+Computational Group Theory: permutation groups, soluble and <span
+class="math"><em>p</em></span>-groups, matrix groups and finitely
+presented groups. We will cover typical problems and standard
+algorithms, along with the analysis of these algorithms and their
+practical use on a computer. In the practical sessions there will be
+some emphasis on using the computer algebra system
+<a href="http://www.gap-system.org">GAP</a>, a world wide open
+source project established in 1988. After this course the participants
+will have a good understanding of what computers can and cannot do
+with groups and will be able to use  to answer their own group
+theoretic questions. We aim to appeal to a broad spectrum of students
+from areas such as Algebra, Topology, Combinatorics and Graph
+Theory.</p>
+
+<p align=justify>
+  <b>Principal Speakers:</b></br>
+  <table cellpadding=10>
+    <tr>
+    <td>Permutation Groups</td>
+    <td>Alexander Hulpke (Colorado State University)</td>
+    <td></td>
+    </tr>
+    <tr>
+    <td>Soluble Groups and p-groups</td>
+    <td>Bettina Eick (Technische Universität Braunschweig)</td>
+    <td></td>
+    </tr>
+    <tr>
+    <td>Matrix Groups/Constructive Recognition</td>
+    <td>Derek Holt (University of Warwick)</td>
+    <td></td>
+    </tr>
+    <tr>
+    <td>Finitely Presented Groups</td>
+    <td>Max Neunhöffer (University of St Andrews)</td>
+    <td></td>
+    </tr>
+  </table>
+</p>
+
+
+<p align=justify>
+LMS/EPSRC Short Courses aim to provide training for postgraduate students in core areas of mathematics.  Part of their success is the opportunity for students to meet other students working in related areas as well as the chance to meet a number of leading experts in the topic.
+</p>
+
+
+</table>
+
+</body>
+</html>
